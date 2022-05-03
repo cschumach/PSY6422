@@ -1,12 +1,10 @@
 ---
 title: "IEM Katowice 2020"
-author: '210155431'
+author: 'Author: 210155431'
 date: '2022-04-29'
 output:
   pdf_document: default
   html_document: default
-  header-includes:
-    - \usepackage{animate}
 ---
 
 
@@ -35,7 +33,7 @@ IEM Katowice stands out among other e-sport tournaments due to its prize pool of
 
 
 ### Data Collection
-  The data sets were acquired via **[kaggle](https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download)**
+  The data sets were acquired via **[Kaggle](https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download)**.
 
 ### Data Used
   The data set which was chosen for analysis was player data across tournaments. 
@@ -77,18 +75,19 @@ dfnaviP <- dfpkato%>%filter(team == "Natus Vincere" | team == "G2" |
 
 ```
 
-We were also curious about player performance across all teams so for ease of interpretation, we arranged the players by teams. 
+We were also curious about player performance across all teams, so we arranged the players by teams. 
 ```{r}
 #arranging entire tournament into groups by team for ease of interpretation
 
 katoPRGT <- dfpkato %>% group_by(team) %>% arrange(team)
 ```
 
-Furthermore, we wanted to visualize the wins and losses of players throughout the tournament. Unfortunately, this was in another data set included from the initial kaggle download which focused on team results.This data set could not be simply added to the player statistics due to formatting and coding differences.
+After this, we wanted to visualize the wins and losses of players throughout the tournament. Unfortunately, this was in another data set included from the initial kaggle download which focused on team results.This data set could not be simply added to the player statistics due to formatting and coding differences.
 ```{r echo=FALSE}
+#example of differences formatitting and coding wise
 head(dfr)
 ```
-In order to get around this we took the same steps with the player data, and filtered and arranged the data to only Katowice. 
+In order to get around this we took the same steps with the player data, and filtered and arranged the data to only Katowice 2020. 
 ```{r}
 #filtering the data via match ID (4901) to only include matches and players during 2020 katowice
 dfrkato <- dfr%>%filter(event_id == 4901)
@@ -96,7 +95,7 @@ dfrkato <- dfr%>%filter(event_id == 4901)
 katoRGT <- dfrkato %>% group_by(team_1) %>% arrange(team_1)
 ```
 
-After this dummy coding was utilized to create a new column to show wins and loses.  0 was coded as a win and 1 as a loss. This new column was inserted into the filtered and arranged player statistics data frame. 
+After this stage dummy coding was utilized to create a new column to show wins and loses.  0 was coded as a win and 1 as a loss. This new column was inserted into the filtered and arranged player statistics data frame. 
 ```{r}
 #adding column of wins for overall player grouped stats, cols were dummy coded from dfrkato to be generalizable
 katoPRGT["winner"] <- c(0,0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -108,7 +107,7 @@ katoPRGT["winner"] <- c(0,0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
   After finishing the initial data clearing and filtering, it was noted that the initial data set which was imported did not contain the full match data for IEM Katowice 2020. In order to remedy this the data frame; katoPRGT (the filtered and cleaned data set) was opened, and the missing data was imputed from [HLTV.org](https://www.hltv.org/results?event=4901). The new data set has been uploaded to [github](https://github.com/cschumach/csgokatowiceplayerdata) for replicability.
 
-  The data set was then imported back into R Studio and named fullkatoplayerdf. And the was filtered in order to track the teams Natus Vincere and G2 (the two finalists) and their opponents. The data set was then arranged by date in order to decrease rendering times for the creation of the animation.
+  The data set was then imported back into R Studio and named fullkatoplayerdf and then; based on the previous exploration of the data with differnt filters, it was decided to use a filter to track the teams Natus Vincere and G2 (the two finalists) as well as their opponents to reduce amount of data points on the plot. The data set was then arranged by date in order to decrease rendering times for the creation of the animation.
 ```{r}
 fullkatoplayerdf <- read.csv(here('data','fullkatoplayersdata.csv'))
 #filter to only track matches with Natus, G2 and their opponents
@@ -130,7 +129,7 @@ mycolors <- c("#6A00FF", "#FF00FF", "#FF0040", "#FF9500", "#FFFF00",
               "#AAFF00","#00FF15", "#00FFFF", "#0095FF")
 ```
 
-```{r, eval=FALSE, echo=TRUE}
+```{r echo=TRUE}
 e <- ggplot(filfullkatoplayerdf, aes(x = kast, y = adr, color = team)) +
   
   geom_point(size = 4, alpha = .6, aes(shape = factor(winner))) +
@@ -161,7 +160,7 @@ e <- ggplot(filfullkatoplayerdf, aes(x = kast, y = adr, color = team)) +
 ```
 
 ```{r}
-knitr::include_graphics(here::here("figs", 'figure1.png'))
+#knitr::include_graphics(here::here("figs", 'figure1.png'))
 ```
 
 ### Visualization Summary
@@ -170,10 +169,12 @@ knitr::include_graphics(here::here("figs", 'figure1.png'))
 
 ### Visualization Animated
 
-  In order to make the plot more understandable an animation was created with gganimate.
+  In order to make the plot more understandable an animation was created with gganimate.Unfortunately due to constraints with R Markdown to PDF and LaTeX to HTML, the animation cannot be embedded within the document, please check the "figs" folder to view the animation. The code is shown below.
+  
 
-```{r, eval=FALSE, echo=TRUE}
+```{r eval=FALSE, include=TRUE}
 #building the animation
+require(gganimate)
 graph2.animation <- e +  
   #defining what the transition will be based on
   transition_time(filfullkatoplayerdf$date) +
@@ -190,16 +191,20 @@ animate(graph2.animation, height = 650, width = 800, detail = 15,
         end_pause = 75, res = 100) 
 
 #saving animation
+
 anim_save(here::here('figs','anifig.gif'))
 
 
 
 ```
-Unfortunately due to constraints with R Markdown to PDF, the animation cannot be embedded within the document. 
-  
 
 
+```{r}
+#knitr::include_graphics(here::here("figs", 'anifig.gif'))
 
+```
+
+ 
 ### Visualization Animation Summary
 
   This animation adds a new dimension to the original plot and helps tell the story of Natus Vincere and G2's journey to the finals. This visualization shows the variations in the players skill (each data point) and the team performance based on each date of the tournament. It provides an interesting insight into what factors (although only two) may contribute to a higher win rate. 
@@ -212,7 +217,7 @@ The animated version works well in tandem with the non animated version as well 
 
 ### Future Direction 
 
-Due to the complexity and sheer amount of variables which can influence a team's win rate and player skill, it would be extremely interesting to conduct structural equation modeling on more variables inherent to the player, such as reaction time, experience, map knowledge and team work. Another possibility, would be run  mixed effect models on the data, in order to work out win chance in order to train machine learning models to predict match outcomes. 
+  Due to the complexity and sheer amount of variables which can influence a team's win rate and player skill, it would be extremely interesting to conduct structural equation modeling on more variables inherent to the player, such as reaction time, experience, map knowledge and team work. Another possibility, would be run  mixed effect models on the data, in order to work out win chance in order to train machine learning models to predict match outcomes. 
 
 
 
