@@ -1,15 +1,15 @@
-# PSY6422 Data Visualization
-View the RMarkdown folder below
-# IEM Katowice 2020 Visualization
+## PSY6422 Data Visualization
+
+### IEM Katowice 2020 Visualization
 Repository for project with important details.
-# Data Origin 
+### Data Origin 
 The data sets were acquired via **[Kaggle](https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download)** 
 (link to the initial data collectors profile **[here](https://www.kaggle.com/mateusdmachado)**). 
 
 The intial set consisted of three different csv files; player data, results and, economy. This project utilized the player results, while used the results.csv win column for
 dummy coding refrence.
 
-# Codebook
+### Codebook
 **date** = date of tournament
 
 **player_name** = name of the player
@@ -24,7 +24,7 @@ dummy coding refrence.
 
 **winner** = Was the match a win or a loss? 0 = win, 1 = loss
 
-# Project Details
+### Project Details
 **Coded in R version 4.2.0**
 
 **Packages Used**:
@@ -37,7 +37,7 @@ dummy coding refrence.
 * RColorBrewer 1.1-3
 * tidyverse 1.3.1
 * PNG  (version NA)
-# Folder Structure
+### Folder Structure
 * data = contains filtered and cleaned data
 * rawdata = 2 raw data sets from kaggle pre cleaning
 * figs = 2 figures, one gganimation and one ggplot
