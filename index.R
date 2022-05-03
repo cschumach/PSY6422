@@ -11,12 +11,13 @@ library('extrafont')
 library('ggplot2')
 #loading fonts
 font_import()
-#converts the two datasets into dataframe
-dfr <- read.csv("results.csv")
-dfp <- read.csv("players.csv")
-katoplayerwins <- read.csv("katoplayerresults.csv")
+#converts the datasets into dataframes
+dfr <- read.csv(here::here('rawdata',"results.csv"))
+dfp <- read.csv(here::here('rawdata',"players.csv"))
+#new data frame from imputed data, link to csv can be found in markdown
+katoplayerwins <- read.csv(here::here('data',"katoplayerresults.csv"))
 #the data frame below was created based on the katoPGRT data frame, missing data was filled in.
-fullkatoplayerdf <- read.csv('fullkatoplayersdata.csv')
+fullkatoplayerdf <- read.csv(here::here('data','fullkatoplayersdata.csv'))
 #filtering the data via match ID (4901) to only include matches and players during 2020 katowice
 dfrkato <- dfr%>%filter(event_id == 4901)
 dfpkato <- dfp%>%filter(event_id == 4901)

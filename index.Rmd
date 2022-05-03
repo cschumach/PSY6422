@@ -48,26 +48,26 @@ library("here")
 library('RColorBrewer')
 library('ggrepel')
 library('plotly')
-dfp <- read.csv(here('rawdata', "players.csv"))
+dfp <- read.csv(here::here('rawdata', "players.csv"))
 head(dfp)
 ```
 
 
 
 ### Data Cleaning
-In order to make extract only statistics from IEM Katowice 2020, the initial data frame was filtered.
+In order to make extract only statistics from IEM Katowice 2020, the initial data frame was filtered. The goal of this stage was to not only clean the data, but investigate would data would provide an interesting visualization.
 ```{r include=FALSE}
 #converts the two datasets into dataframe
 #results info
-dfr <- read.csv(here('rawdata',"results.csv"))
+dfr <- read.csv(here::here('rawdata',"results.csv"))
 #player info
-dfp <- read.csv(here('rawdata',"players.csv"))
+dfp <- read.csv(here::here('rawdata',"players.csv"))
 #filtering the data via match ID (4901) to only include matches and players during 2020 katowice
 dfpkato <- dfp%>%filter(event_id == 4901)
 
 ```
 
-Furthermore,  we specifically look at the performance of the two finalist teams (Natus Vincere and G2) and see how they compared to the other participants. In order to do this, we filtered matches in which the team was Natus or G2 and the opponent was either Natus or G2.
+First the performance of the two finalist teams (Natus Vincere and G2) was looked at to see how they compared to the other participants. In order to do this, we filtered matches in which the team was Natus or G2 and the opponent was either Natus or G2.
 ```{r}
 #filtering teams and adding players to track the teams and the matches who ended up in the finals
 dfnaviP <- dfpkato%>%filter(team == "Natus Vincere" | team == "G2" | 
@@ -75,16 +75,16 @@ dfnaviP <- dfpkato%>%filter(team == "Natus Vincere" | team == "G2" |
 
 ```
 
-We were also curious about player performance across all teams, so we arranged the players by teams. 
+We were also curious about player performance across all teams, so the players were arranged by teams. 
 ```{r}
 #arranging entire tournament into groups by team for ease of interpretation
 
 katoPRGT <- dfpkato %>% group_by(team) %>% arrange(team)
 ```
 
-After this, we wanted to visualize the wins and losses of players throughout the tournament. Unfortunately, this was in another data set included from the initial kaggle download which focused on team results.This data set could not be simply added to the player statistics due to formatting and coding differences.
+After this, we wanted to add another dimension to the plot by visualizing the wins and losses of players throughout the tournament. Unfortunately, this was in another data set included from the initial kaggle download which focused on team results.This data set could not be simply added to the player statistics due to formatting and coding differences.
 ```{r echo=FALSE}
-#example of differences formatitting and coding wise
+#example of differences formatting and coding wise
 head(dfr)
 ```
 In order to get around this we took the same steps with the player data, and filtered and arranged the data to only Katowice 2020. 
@@ -95,7 +95,7 @@ dfrkato <- dfr%>%filter(event_id == 4901)
 katoRGT <- dfrkato %>% group_by(team_1) %>% arrange(team_1)
 ```
 
-After this stage dummy coding was utilized to create a new column to show wins and loses.  0 was coded as a win and 1 as a loss. This new column was inserted into the filtered and arranged player statistics data frame. 
+After this stage, dummy coding was utilized to create a new column to show wins and loses.  0 was coded as a win and 1 as a loss. This new column was inserted into the filtered and arranged player statistics data frame. 
 ```{r}
 #adding column of wins for overall player grouped stats, cols were dummy coded from dfrkato to be generalizable
 katoPRGT["winner"] <- c(0,0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -107,7 +107,7 @@ katoPRGT["winner"] <- c(0,0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
   After finishing the initial data clearing and filtering, it was noted that the initial data set which was imported did not contain the full match data for IEM Katowice 2020. In order to remedy this the data frame; katoPRGT (the filtered and cleaned data set) was opened, and the missing data was imputed from [HLTV.org](https://www.hltv.org/results?event=4901). The new data set has been uploaded to [github](https://github.com/cschumach/csgokatowiceplayerdata) for replicability.
 
-  The data set was then imported back into R Studio and named fullkatoplayerdf and then; based on the previous exploration of the data with differnt filters, it was decided to use a filter to track the teams Natus Vincere and G2 (the two finalists) as well as their opponents to reduce amount of data points on the plot. The data set was then arranged by date in order to decrease rendering times for the creation of the animation.
+  The data set was then imported back into R Studio and named fullkatoplayerdf and then; based on the previous exploration of the data with different filters, it was decided to track the teams Natus Vincere and G2 (the two finalists) as well as their opponents to reduce amount of data points on the plot. The data set was then arranged by date in order to decrease rendering times for the creation of the animation.
 ```{r}
 fullkatoplayerdf <- read.csv(here('data','fullkatoplayersdata.csv'))
 #filter to only track matches with Natus, G2 and their opponents
@@ -128,6 +128,8 @@ tail(filfullkatoplayerdf)
 mycolors <- c("#6A00FF", "#FF00FF", "#FF0040", "#FF9500", "#FFFF00", 
               "#AAFF00","#00FF15", "#00FFFF", "#0095FF")
 ```
+
+Due to the previous scoping of the data, a scatter plot was utilized.
 
 ```{r echo=TRUE}
 e <- ggplot(filfullkatoplayerdf, aes(x = kast, y = adr, color = team)) +
@@ -215,9 +217,18 @@ anim_save(here::here('figs','anifig.gif'))
 
 The animated version works well in tandem with the non animated version as well as a standalone to further show the scores updating for each date of the tournament adding another dimension to the original non animated plot. 
 
+### Constraints 
+
+There were few constraints throughout this project, the first was a lack of meaningful and in depth statistics on professional CSGO players, while ADR and KAST serve as decent measure of skill, statistics such as reaction time and utility damage would of made for a more in deph visualization and a new dimension to analyze. Furthermore, there is a lack of professional CSGO data sets available. This may be due to third party constraints on Web scraping as the main CSGO statistics provider(HLTV) has set up measures against it; requiring external programs. 
+
 ### Future Direction 
 
-  Due to the complexity and sheer amount of variables which can influence a team's win rate and player skill, it would be extremely interesting to conduct structural equation modeling on more variables inherent to the player, such as reaction time, experience, map knowledge and team work. Another possibility, would be run  mixed effect models on the data, in order to work out win chance in order to train machine learning models to predict match outcomes. 
+  Due to the complexity and sheer amount of variables which can influence a team's win rate and player skill, it would be extremely interesting to conduct structural equation modeling on more variables inherent to the player, such as reaction time, experience, map knowledge, movement and, team work. Another possibility, would be run  mixed effect models on the data, in order to work out win chance in order to train machine learning models to predict match outcomes. 
+  
+The repository for this project, as well as all data used can be found **[here](https://github.com/cschumach/PSY6422)**.
+
+  
+
 
 
 
