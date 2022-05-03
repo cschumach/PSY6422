@@ -1,0 +1,291 @@
+date,player_name,team,opponent,kast,adr,rating,hs,winner
+2020-02-26,AZR,100 Thieves,TYLOO,82.4,68.5,1.14,17,0
+2020-02-26,Gratisfaction,100 Thieves,TYLOO,76.5,57.5,1.08,10,0
+2020-02-26,Liazz,100 Thieves,TYLOO,86.3,95.5,1.48,21,0
+2020-02-26,jkaem,100 Thieves,TYLOO,74.5,89.2,1.39,23,0
+2020-02-26,jks,100 Thieves,TYLOO,82.4,96.6,1.49,23,0
+2020-02-24,AZR,100 Thieves,G2,40.5,41.6,0.37,8,1
+2020-02-24,Gratisfaction,100 Thieves,G2,43.2,44.9,0.44,4,1
+2020-02-24,Liazz,100 Thieves,G2,54.1,49.9,0.55,6,1
+2020-02-24,jkaem,100 Thieves,G2,51.4,64.4,0.78,13,1
+2020-02-24,jks,100 Thieves,G2,59.5,84.1,0.9,18,1
+2020-02-25,Magisk,Astralis,Vitality,75.8,85.9,1.33,20,0
+2020-02-25,Xyp9x,Astralis,Vitality,74.2,81.4,1.11,20,0
+2020-02-25,device,Astralis,Vitality,68.2,76.3,1.16,23,0
+2020-02-25,dupreeh,Astralis,Vitality,74.2,84.2,1.22,26,0
+2020-02-25,gla1ve,Astralis,Vitality,74.2,65.7,0.9,17,0
+2020-02-24,Magisk,Astralis,Cloud9,74.5,83,1.18,17,0
+2020-02-24,Xyp9x,Astralis,Cloud9,84.3,95.6,1.52,21,0
+2020-02-24,device,Astralis,Cloud9,82.4,88.3,1.57,21,0
+2020-02-24,dupreeh,Astralis,Cloud9,80.4,78.2,1.07,19,0
+2020-02-24,gla1ve,Astralis,Cloud9,82.4,68.6,1.11,14,0
+2020-02-25,JT,Cloud9,NiP,53.5,44.5,0.59,11,1
+2020-02-25,Sonic,Cloud9,NiP,55.8,50.4,0.59,13,1
+2020-02-25,floppy,Cloud9,NiP,65.1,77.3,0.94,15,1
+2020-02-25,motm,Cloud9,NiP,60.5,61.4,0.76,13,1
+2020-02-25,oSee,Cloud9,NiP,69.8,67.8,0.81,11,1
+2020-02-24,JT,Cloud9,Astralis,54.9,57.2,0.71,16,1
+2020-02-24,Sonic,Cloud9,Astralis,70.6,55.5,0.82,11,1
+2020-02-24,floppy,Cloud9,Astralis,56.9,75.5,0.94,14,1
+2020-02-24,motm,Cloud9,Astralis,62.7,58.8,0.83,13,1
+2020-02-24,oSee,Cloud9,Astralis,64.7,52.4,0.73,6,1
+2020-02-26,Brehze,Evil Geniuses,Liquid,71.1,79.9,1.04,29,1
+2020-02-26,CeRq,Evil Geniuses,Liquid,65.1,71.7,0.98,18,1
+2020-02-26,Ethan,Evil Geniuses,Liquid,65.1,58.7,0.83,18,1
+2020-02-26,stanislaw,Evil Geniuses,Liquid,61.4,69,0.88,17,1
+2020-02-26,tarik,Evil Geniuses,Liquid,69.9,69.2,0.92,18,1
+2020-02-25,Brehze,Evil Geniuses,MAD Lions,77,96,1.48,39,0
+2020-02-25,CeRq,Evil Geniuses,MAD Lions,71.6,76.3,1.11,16,0
+2020-02-25,Ethan,Evil Geniuses,MAD Lions,77,81.9,1.34,29,0
+2020-02-25,stanislaw,Evil Geniuses,MAD Lions,74.3,62.3,0.93,18,0
+2020-02-25,tarik,Evil Geniuses,MAD Lions,70.3,61.7,0.91,18,0
+2020-02-26,NiKo,FaZe,Vitality,77.1,77.6,1.2,21,0
+2020-02-26,broky,FaZe,Vitality,78.3,78.3,1.25,16,0
+2020-02-26,coldzera,FaZe,Vitality,80.7,74.1,1.12,30,0
+2020-02-26,olofmeister,FaZe,Vitality,73.5,71.6,1.03,22,0
+2020-02-26,rain,FaZe,Vitality,71.1,76.3,1.06,25,0
+2020-02-25,NiKo,FaZe,Renegades,74.1,75.8,1.14,15,0
+2020-02-25,broky,FaZe,Renegades,77.8,82.5,1.31,16,0
+2020-02-25,coldzera,FaZe,Renegades,72.2,59.7,1.02,20,0
+2020-02-25,olofmeister,FaZe,Renegades,70.4,77.4,1.2,17,0
+2020-02-25,rain,FaZe,Renegades,79.6,89.7,1.32,29,0
+2020-02-24,NiKo,FaZe,Natus Vincere,67.9,91.2,1.17,30,1
+2020-02-24,broky,FaZe,Natus Vincere,66.7,62.9,0.93,12,1
+2020-02-24,coldzera,FaZe,Natus Vincere,72.8,76.8,1.11,34,1
+2020-02-24,olofmeister,FaZe,Natus Vincere,70.4,59.1,1,24,1
+2020-02-24,rain,FaZe,Natus Vincere,67.9,73.3,0.95,31,1
+2020-02-25,Brollan,fnatic,Natus Vincere,66.7,68.8,1.04,33,0
+2020-02-25,Golden,fnatic,Natus Vincere,71.6,66.2,0.99,27,0
+2020-02-25,JW,fnatic,Natus Vincere,64.2,72.8,1,20,0
+2020-02-25,KRIMZ,fnatic,Natus Vincere,72.8,84.5,1.33,30,0
+2020-02-25,flusha,fnatic,Natus Vincere,77.8,85.2,1.12,20,0
+2020-02-24,Brollan,fnatic,Renegades,74,90.4,1.44,21,0
+2020-02-24,Golden,fnatic,Renegades,70,62.9,0.99,17,0
+2020-02-24,JW,fnatic,Renegades,74,86,1.39,17,0
+2020-02-24,KRIMZ,fnatic,Renegades,70,59,0.92,13,0
+2020-02-24,flusha,fnatic,Renegades,74,84.8,1.16,18,0
+2020-02-26,AmaNEk,G2,mousesports,73,82.8,1.16,25,0
+2020-02-26,JaCkz,G2,mousesports,79.7,63.6,1.04,22,0
+2020-02-26,huNter-,G2,mousesports,74.3,89,1.21,39,0
+2020-02-26,kennyS,G2,mousesports,79.7,90.8,1.46,22,0
+2020-02-26,nexa,G2,mousesports,79.7,70.5,1.19,29,0
+2020-02-24,AmaNEk,G2,100 Thieves,91.9,107.2,1.74,17,0
+2020-02-24,JaCkz,G2,100 Thieves,86.5,79.7,1.39,17,0
+2020-02-24,huNter-,G2,100 Thieves,91.9,112.1,1.77,20,0
+2020-02-24,kennyS,G2,100 Thieves,67.6,72.7,1.15,9,0
+2020-02-24,nexa,G2,100 Thieves,97.3,95.1,1.62,18,0
+2020-02-26,EliGE,Liquid,Evil Geniuses,67.5,77.9,1.08,28,0
+2020-02-26,NAF,Liquid,Evil Geniuses,77.1,75.9,1.08,23,0
+2020-02-26,Stewie2K,Liquid,Evil Geniuses,73.5,67.2,1.08,31,0
+2020-02-26,Twistzz,Liquid,Evil Geniuses,77.1,93.3,1.36,45,0
+2020-02-26,nitr0,Liquid,Evil Geniuses,73.5,64.6,1.06,17,0
+2020-02-25,EliGE,Liquid,Virtus.pro,68.3,94.9,1.23,26,0
+2020-02-25,NAF,Liquid,Virtus.pro,71.7,71.3,1.12,13,0
+2020-02-25,Stewie2K,Liquid,Virtus.pro,71.7,60.9,1.04,15,0
+2020-02-25,Twistzz,Liquid,Virtus.pro,73.3,82.5,1.21,34,0
+2020-02-25,nitr0,Liquid,Virtus.pro,75,64.9,1,17,0
+2020-02-26,Bubzkji,MAD Lions,Virtus.pro,70.7,76.2,1.06,29,0
+2020-02-26,HUNDEN,MAD Lions,Virtus.pro,70.7,60.8,0.86,21,0
+2020-02-26,acoR,MAD Lions,Virtus.pro,69.5,60,1.01,13,0
+2020-02-26,roeJ,MAD Lions,Virtus.pro,68.3,71.2,0.93,26,0
+2020-02-26,sjuush,MAD Lions,Virtus.pro,75.6,89.2,1.29,31,0
+2020-02-25,Bubzkji,MAD Lions,Evil Geniuses,60.8,63.6,0.81,24,1
+2020-02-25,HUNDEN,MAD Lions,Evil Geniuses,58.1,54.5,0.75,17,1
+2020-02-25,acoR,MAD Lions,Evil Geniuses,67.6,74.7,1.13,19,1
+2020-02-25,roeJ,MAD Lions,Evil Geniuses,59.5,54.6,0.69,20,1
+2020-02-25,sjuush,MAD Lions,Evil Geniuses,68.9,83.7,1.14,26,1
+2020-02-26,chrisJ,mousesports,G2,63.5,66.4,0.84,23,1
+2020-02-26,frozen,mousesports,G2,58.1,63.7,0.76,15,1
+2020-02-26,karrigan,mousesports,G2,58.1,63.6,0.7,19,1
+2020-02-26,ropz,mousesports,G2,70.3,76.1,1.04,35,1
+2020-02-26,woxic,mousesports,G2,68.9,72.6,1.06,18,1
+2020-02-24,chrisJ,mousesports,TYLOO,72.3,71.6,1.09,14,0
+2020-02-24,frozen,mousesports,TYLOO,74.5,95.5,1.33,18,0
+2020-02-24,karrigan,mousesports,TYLOO,74.5,85.6,1.34,24,0
+2020-02-24,ropz,mousesports,TYLOO,78.7,76.5,1.31,18,0
+2020-02-24,woxic,mousesports,TYLOO,72.3,77,1.26,8,0
+2020-02-26,Boombl4,Natus Vincere,NiP,80,80.5,1.29,14,0
+2020-02-26,Perfecto,Natus Vincere,NiP,84.4,81.8,1.32,10,0
+2020-02-26,electronic,Natus Vincere,NiP,75.6,79.5,1.22,14,0
+2020-02-26,flamie,Natus Vincere,NiP,77.8,93.6,1.45,24,0
+2020-02-26,s1mple,Natus Vincere,NiP,82.2,87.3,1.56,16,0
+2020-02-25,Boombl4,Natus Vincere,fnatic,67.9,70.9,0.99,20,1
+2020-02-25,Perfecto,Natus Vincere,fnatic,65.4,57.6,0.81,18,1
+2020-02-25,electronic,Natus Vincere,fnatic,59.3,68.6,0.87,26,1
+2020-02-25,flamie,Natus Vincere,fnatic,66.7,58.7,0.83,17,1
+2020-02-25,s1mple,Natus Vincere,fnatic,71.6,89.6,1.29,20,1
+2020-02-24,Boombl4,Natus Vincere,FaZe,66.7,73.3,1,26,0
+2020-02-24,Perfecto,Natus Vincere,FaZe,74.1,70.1,1.07,28,0
+2020-02-24,electronic,Natus Vincere,FaZe,64.2,77.1,1,24,0
+2020-02-24,flamie,Natus Vincere,FaZe,71.6,63.4,0.9,22,0
+2020-02-24,s1mple,Natus Vincere,FaZe,72.8,77.7,1.15,18,0
+2020-02-26,Lekr0,NiP,Natus Vincere,60,66.8,0.78,14,1
+2020-02-26,Plopski,NiP,Natus Vincere,60,87.8,0.92,10,1
+2020-02-26,REZ,NiP,Natus Vincere,53.3,66,0.75,15,1
+2020-02-26,nawwk,NiP,Natus Vincere,55.6,52.1,0.7,7,1
+2020-02-26,twist,NiP,Natus Vincere,60,49.3,0.58,5,1
+2020-02-25,Lekr0,NiP,Cloud9,88.4,85.9,1.33,14,0
+2020-02-25,Plopski,NiP,Cloud9,83.7,81,1.4,16,0
+2020-02-25,REZ,NiP,Cloud9,81.4,92,1.38,18,0
+2020-02-25,nawwk,NiP,Cloud9,88.4,73.7,1.41,13,0
+2020-02-25,twist,NiP,Cloud9,88.4,88.3,1.49,9,0
+2020-02-24,Lekr0,NiP,Vitality,68.5,61.2,0.85,18,1
+2020-02-24,Plopski,NiP,Vitality,66.7,82.3,1.09,18,1
+2020-02-24,REZ,NiP,Vitality,64.8,57.7,0.76,7,1
+2020-02-24,nawwk,NiP,Vitality,72.2,92.5,1.23,14,1
+2020-02-24,twist,NiP,Vitality,57.4,65.9,0.9,15,1
+2020-02-25,Hatz,Renegades,FaZe,59.3,52.9,0.73,10,1
+2020-02-25,INS,Renegades,FaZe,66.7,75,1.05,17,1
+2020-02-25,Sico,Renegades,FaZe,61.1,57.8,0.84,9,1
+2020-02-25,dexter,Renegades,FaZe,61.1,88.9,1.06,19,1
+2020-02-25,malta,Renegades,FaZe,64.8,57.5,0.72,7,1
+2020-02-24,Hatz,Renegades,fnatic,60,52.6,0.71,13,1
+2020-02-24,INS,Renegades,fnatic,66,64.9,0.89,13,1
+2020-02-24,Sico,Renegades,fnatic,60,60.2,0.85,12,1
+2020-02-24,dexter,Renegades,fnatic,64,71.8,0.87,16,1
+2020-02-24,malta,Renegades,fnatic,62,70,0.94,16,1
+2020-02-26,Attacker,TYLOO,100 Thieves,64.7,63.5,0.81,14,1
+2020-02-26,Freeman,TYLOO,100 Thieves,58.8,59.3,0.7,11,1
+2020-02-26,Summer,TYLOO,100 Thieves,64.7,82.9,1.04,20,1
+2020-02-26,somebody,TYLOO,100 Thieves,54.9,53.8,0.78,14,1
+2020-02-26,xeta,TYLOO,100 Thieves,58.8,65,0.78,14,1
+2020-02-24,Attacker,TYLOO,mousesports,57.4,74,0.85,14,1
+2020-02-24,Freeman,TYLOO,mousesports,42.6,40.2,0.45,7,1
+2020-02-24,Summer,TYLOO,mousesports,63.8,73.4,0.88,15,1
+2020-02-24,somebody,TYLOO,mousesports,51.1,69,0.85,15,1
+2020-02-24,xeta,TYLOO,mousesports,57.4,48,0.73,9,1
+2020-02-26,AdreN,Virtus.pro,MAD Lions,68.3,63.7,1.01,25,1
+2020-02-26,Jame,Virtus.pro,MAD Lions,69.5,66,1.07,13,1
+2020-02-26,SANJI,Virtus.pro,MAD Lions,70.7,63,1.02,29,1
+2020-02-26,buster,Virtus.pro,MAD Lions,69.5,75.7,1.09,29,1
+2020-02-26,qikert,Virtus.pro,MAD Lions,79.3,83.8,1.13,29,1
+2020-02-25,AdreN,Virtus.pro,Liquid,63.3,62.2,0.78,14,1
+2020-02-25,Jame,Virtus.pro,Liquid,70,73,1.1,13,1
+2020-02-25,SANJI,Virtus.pro,Liquid,65,70.7,0.93,19,1
+2020-02-25,buster,Virtus.pro,Liquid,66.7,65.6,0.84,16,1
+2020-02-25,qikert,Virtus.pro,Liquid,68.3,71.5,1.08,20,1
+2020-02-26,ALEX,Vitality,FaZe,65.1,71.7,0.95,21,1
+2020-02-26,RpK,Vitality,FaZe,68.7,70.1,0.88,22,1
+2020-02-26,ZywOo,Vitality,FaZe,73.5,97.2,1.44,30,1
+2020-02-26,apEX,Vitality,FaZe,63.9,57,0.72,25,1
+2020-02-26,shox,Vitality,FaZe,66.3,54.4,0.84,20,1
+2020-02-25,ALEX,Vitality,Astralis,56.1,70.5,0.83,15,1
+2020-02-25,RpK,Vitality,Astralis,74.2,78.6,1.13,20,1
+2020-02-25,ZywOo,Vitality,Astralis,68.2,69.8,0.95,12,1
+2020-02-25,apEX,Vitality,Astralis,71.2,87.3,1.02,22,1
+2020-02-25,shox,Vitality,Astralis,60.6,61.9,0.86,19,1
+2020-02-24,ALEX,Vitality,NiP,68.5,102.2,1.43,20,0
+2020-02-24,RpK,Vitality,NiP,77.8,68,1,25,0
+2020-02-24,ZywOo,Vitality,NiP,70.4,91.6,1.3,25,0
+2020-02-24,apEX,Vitality,NiP,64.8,66.6,0.86,11,0
+2020-02-24,shox,Vitality,NiP,70.4,65,1.07,14,0
+2020-02-27,Bubzkji,MAD Lions,mousesports,65.9,101,1.15,15,1
+2020-02-27,HUNDEN,MAD Lions,mousesports,50,39.1,0.42,6,1
+2020-02-27,acoR,MAD Lions,mousesports,50,39.7,0.5,8,1
+2020-02-27,roeJ,MAD Lions,mousesports,61.4,80.5,0.85,16,1
+2020-02-27,sjuush,MAD Lions,mousesports,43.2,59.9,0.73,14,1
+2020-02-27,chrisJ,mousesports,MAD Lions,68.2,78.5,1.22,20,0
+2020-02-27,frozen,mousesports,MAD Lions,86.4,103.7,1.48,24,0
+2020-02-27,karrigan,mousesports,MAD Lions,72.7,76,1.14,13,0
+2020-02-27,ropz,mousesports,MAD Lions,81.8,86.8,1.47,18,0
+2020-02-27,woxic,mousesports,MAD Lions,86.4,99.6,1.65,12,0
+2020-02-27,AZR,100 Thieves,Evil Geniuses,73.8,77.2,1.16,41,0
+2020-02-27,Gratisfaction,100 Thieves,Evil Geniuses,69,70.6,1.02,25,0
+2020-02-27,Liazz,100 Thieves,Evil Geniuses,67.9,70.5,0.96,23,0
+2020-02-27,jkaem,100 Thieves,Evil Geniuses,75,79,1.22,30,0
+2020-02-27,jks,100 Thieves,Evil Geniuses,78.6,64.2,0.99,25,0
+2020-02-27,Brehze,Evil Geniuses,100 Thieves,66.7,66.2,0.94,25,1
+2020-02-27,CeRq,Evil Geniuses,100 Thieves,71.4,72.7,1.12,16,1
+2020-02-27,Ethan,Evil Geniuses,100 Thieves,73.8,60.2,0.93,23,1
+2020-02-27,stanislaw,Evil Geniuses,100 Thieves,69,75.1,1.09,22,1
+2020-02-27,tarik,Evil Geniuses,100 Thieves,71.4,77.7,1.03,18,1
+2020-02-27,Magisk,Astralis,fnatic,81.6,102.3,1.53,13,0
+2020-02-27,Xyp9x,Astralis,fnatic,81.6,85.6,1.25,13,0
+2020-02-27,device,Astralis,fnatic,79.6,86.8,1.31,15,0
+2020-02-27,dupreeh,Astralis,fnatic,71.4,75.2,1.14,21,0
+2020-02-27,gla1ve,Astralis,fnatic,75.5,71.3,1.18,16,0
+2020-02-27,Brollan,fnatic,Astralis,59.2,86.7,1.07,17,1
+2020-02-27,Golden,fnatic,Astralis,57.1,62.1,0.73,11,1
+2020-02-27,JW,fnatic,Astralis,57.1,64.4,0.72,12,1
+2020-02-27,KRIMZ,fnatic,Astralis,63.3,72.3,0.84,12,1
+2020-02-27,flusha,fnatic,Astralis,44.9,47.6,0.46,6,1
+2020-02-27,JaCkz,G2,Liquid,71.7,60.6,0.94,16,0
+2020-02-27,huNter-,G2,Liquid,73.6,91.5,1.27,26,0
+2020-02-27,kennyS,G2,Liquid,73.6,77.3,1.21,15,0
+2020-02-27,nexa,G2,Liquid,83,95.1,1.44,33,0
+2020-02-27,AmaNEk,G2,Liquid,77.4,79.4,1.27,21,0
+2020-02-27,EliGE,Liquid,G2,66,80.3,1.15,18,1
+2020-02-27,NAF,Liquid,G2,52.8,52.2,0.6,11,1
+2020-02-27,Stewie2K,Liquid,G2,58.5,84.4,1.06,17,1
+2020-02-27,Twistzz,Liquid,G2,73.6,63.7,0.91,20,1
+2020-02-27,nitr0,Liquid,G2,58.5,49.7,0.67,14,1
+2020-02-27,Boombl4,Natus Vincere,FaZe,72.4,81.5,1.18,20,0
+2020-02-27,Perfecto,Natus Vincere,FaZe,71.1,58.2,0.91,24,0
+2020-02-27,electronic,Natus Vincere,FaZe,77.6,81.9,1.21,24,0
+2020-02-27,flamie,Natus Vincere,FaZe,75,61.9,0.98,23,0
+2020-02-27,s1mple,Natus Vincere,FaZe,71.1,76.9,1.12,20,0
+2020-02-27,NiKo,FaZe,Natus Vincere,68.4,92.5,1.18,22,1
+2020-02-27,broky,FaZe,Natus Vincere,68.4,65.5,0.99,24,1
+2020-02-27,coldzera,FaZe,Natus Vincere,73.7,72,1.06,33,1
+2020-02-27,olofmeister,FaZe,Natus Vincere,63.2,46.5,0.68,16,1
+2020-02-27,rain,FaZe,Natus Vincere,68.4,71.8,1.06,30,1
+2020-02-27,AZR,100 Thieves,mousesports,72.5,64.9,1.1,30,0
+2020-02-27,Gratisfaction,100 Thieves,mousesports,65,73.1,0.99,25,0
+2020-02-27,Liazz,100 Thieves,mousesports,68.8,63.6,0.96,18,0
+2020-02-27,jkaem,100 Thieves,mousesports,63.7,63.2,0.93,23,0
+2020-02-27,jks,100 Thieves,mousesports,65,80.5,1.05,25,0
+2020-02-27,chrisJ,mousesports,100 Thieves,67.5,55.2,0.91,17,1
+2020-02-27,frozen,mousesports,100 Thieves,71.2,86.8,1.22,38,1
+2020-02-27,karrigan,mousesports,100 Thieves,71.2,66.3,0.92,18,1
+2020-02-27,ropz,mousesports,100 Thieves,76.2,80.3,1.18,36,1
+2020-02-27,woxic,mousesports,100 Thieves,70,66.4,1,22,1
+2020-02-28,Brollan,fnatic,100 Thieves,70,58.1,0.88,18,0
+2020-02-28,Golden,fnatic,100 Thieves,70,70.6,1.07,24,0
+2020-02-28,JW,fnatic,100 Thieves,61.4,81,1.14,16,0
+2020-02-28,KRIMZ,fnatic,100 Thieves,75.7,85.5,1.38,18,0
+2020-02-28,flusha,fnatic,100 Thieves,68.6,81.5,1.06,16,0
+2020-02-28,AZR,100 Thieves,fnatic,65.7,67.9,0.86,17,1
+2020-02-28,Gratisfaction,100 Thieves,fnatic,57.1,59.7,0.77,9,1
+2020-02-28,Liazz,100 Thieves,fnatic,68.6,47.3,0.7,13,1
+2020-02-28,jkaem,100 Thieves,fnatic,65.7,85.3,1.08,27,1
+2020-02-28,jks,100 Thieves,fnatic,71.4,90.4,1.35,28,1
+2020-02-28,Boombl4,Natus Vincere,Liquid,71.4,56.8,0.87,18,0
+2020-02-28,Perfecto,Natus Vincere,Liquid,67.9,63.1,1.01,11,0
+2020-02-28,electronic,Natus Vincere,Liquid,66.1,83.8,1.16,22,0
+2020-02-28,flamie,Natus Vincere,Liquid,76.8,74.8,1.06,17,0
+2020-02-28,s1mple,Natus Vincere,Liquid,67.9,86,1.28,14,0
+2020-02-28,EliGE,Liquid,Natus Vincere,67.9,101.8,1.32,20,1
+2020-02-28,NAF,Liquid,Natus Vincere,67.9,68,0.96,18,1
+2020-02-28,Stewie2K,Liquid,Natus Vincere,58.9,58.6,0.69,10,1
+2020-02-28,Twistzz,Liquid,Natus Vincere,76.8,67.1,0.99,25,1
+2020-02-28,nitr0,Liquid,Natus Vincere,73.2,57,0.93,10,1
+2020-02-29,Brollan,fnatic,G2,68.7,71.5,0.99,26,1
+2020-02-29,Golden,fnatic,G2,69.9,81.3,1.15,37,1
+2020-02-29,JW,fnatic,G2,69.9,75.7,1.13,15,1
+2020-02-29,KRIMZ,fnatic,G2,71.1,65.8,1.04,18,1
+2020-02-29,flusha,fnatic,G2,59,71.6,0.86,21,1
+2020-02-29,JaCkz,G2,fnatic,69.9,77.9,1.17,43,0
+2020-02-29,huNter-,G2,fnatic,72.3,71.5,0.99,22,0
+2020-02-29,kennyS,G2,fnatic,72.3,82.1,1.23,25,0
+2020-02-29,nexa,G2,fnatic,65.1,64.3,0.89,24,0
+2020-02-29,AmaNEk,G2,fnatic,65.1,64.5,0.83,12,0
+2020-02-29,Boombl4,Natus Vincere,Astralis,69,80.7,1.16,15,0
+2020-02-29,Perfecto,Natus Vincere,Astralis,83.3,59,1.05,15,0
+2020-02-29,electronic,Natus Vincere,Astralis,73.8,83.3,1.5,16,0
+2020-02-29,flamie,Natus Vincere,Astralis,85.7,91.3,1.52,26,0
+2020-02-29,s1mple,Natus Vincere,Astralis,85.7,111.6,1.79,12,0
+2020-02-29,Magisk,Astralis,Natus Vincere,61.9,66.3,0.72,5,1
+2020-02-29,Xyp9x,Astralis,Natus Vincere,54.8,54.7,0.68,13,1
+2020-02-29,device,Astralis,Natus Vincere,61.9,60,0.75,7,1
+2020-02-29,dupreeh,Astralis,Natus Vincere,61.9,60.3,0.71,6,1
+2020-02-29,gla1ve,Astralis,Natus Vincere,42.9,64.2,0.64,13,1
+2020-03-01,JaCkz,G2,Natus Vincere,53.7,52.9,0.64,20,1
+2020-03-01,huNter-,G2,Natus Vincere,64.2,79.1,0.95,24,1
+2020-03-01,kennyS,G2,Natus Vincere,49.3,47.7,0.55,15,1
+2020-03-01,nexa,G2,Natus Vincere,59.7,51.4,0.73,23,1
+2020-03-01,AmaNEk,G2,Natus Vincere,62.7,65.4,0.8,17,1
+2020-03-01,Boombl4,Natus Vincere,G2,85.1,106.9,1.68,27,0
+2020-03-01,Perfecto,Natus Vincere,G2,85.1,55.4,1.15,18,0
+2020-03-01,electronic,Natus Vincere,G2,68.7,80.8,1.16,28,0
+2020-03-01,flamie,Natus Vincere,G2,76.1,74.2,1.19,24,0
+2020-03-01,s1mple,Natus Vincere,G2,86.6,95.7,1.52,23,0
