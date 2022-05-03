@@ -8,6 +8,12 @@ The data sets were acquired via **[Kaggle](https://www.kaggle.com/datasets/mateu
 
 The intial set consisted of three different csv files; player data, results and, economy. This project utilized the player results, while used the results.csv win column for
 dummy coding refrence.
+### Important
+If you down load this respo and run the r script or markdown, you MUST go to rawdata folder in main and docs and unzip the players.csv, the file is too large to add to github if not compressed.
+
+The animated plot could not be added to either the PDF or the git.io due to LaTeX issues, the plot is located in the 'figs' folder, and is called 'anifig' 
+
+
 
 ### Codebook
 **date** = date of tournament
