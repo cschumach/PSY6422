@@ -5,12 +5,8 @@ library('gganimate')
 library("ggthemes")
 library("here")
 library('RColorBrewer')
-library('ggrepel')
-library('plotly')
-library('extrafont')
 library('ggplot2')
-#loading fonts
-font_import()
+
 #converts the datasets into dataframes
 dfr <- read.csv(here::here('rawdata',"results.csv"))
 dfp <- read.csv(here::here('rawdata',"players.csv"))
@@ -50,7 +46,7 @@ dfg2navi <- katoPRGT %>% filter(team == "Natus Vincere" | team == "G2" | opponen
 mycolors <- c("#6A00FF", "#FF00FF", "#FF0040", "#FF9500", "#FFFF00", "#AAFF00","#00FF15", "#00FFFF", "#0095FF")
 
 
-#scatterplot tracking winners (g2 & navi) for kato
+#TEST FOR EDIT TESTING:scatterplot tracking winners (g2 & navi) for kato
 #d <- ggplot(filfullkatoplayerdf, aes(x = kast, y = hs, color = team)) +
  #  geom_point(size = 4, alpha = .7, aes(shape = factor(winner))) +
   

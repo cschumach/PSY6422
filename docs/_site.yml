@@ -1,7 +1,0 @@
-name: "IEM Katowice 2020 Visualization"
-navbar:
-title: "IEM Katowice 2020 Visualization"
-left:
--text: "home"
-href: index.html
-output_dir: "docs"

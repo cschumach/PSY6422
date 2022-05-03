@@ -209,8 +209,8 @@ CT side (defensive) must protect the bombsites, deny bomb planting,
 defuse the bomb (if planted), or eliminate the T side to win the
 round.</p>
 </div>
-<div id="current-study" class="section level3">
-<h3>Current Study</h3>
+<div id="current-study-objective" class="section level3">
+<h3>Current Study Objective</h3>
 <p>This study, seeks to look at the performance of professional players
 and their teams across the entire length of the tournament. The
 visualization will compare the players <strong>KAST score (Kills,
@@ -224,23 +224,131 @@ Carlo, 2019)</a></strong></p>
 Round (ADR)</strong>, as this provides a good gauge of individual match
 impact for the player as it averages out the damage which they cause to
 the other teams players round by round. This adds insight into
-statistics that will not count towards ones KAST, such as utility damage
-(grenades), damage from T-Side bomb explosions and, head shots (ex head
-shots have a higher damage value attributed to them, thus a player with
-a higher ADR will have a higher amount of head shots). This measure is
-continuous <strong><a
+statistics that will not count towards a players KAST, such as utility
+damage (grenades), damage from T-Side bomb explosions and, head shots
+(ex head shots have a higher damage value attributed to them, thus a
+player with a higher ADR will have a higher amount of head shots). This
+measure is continuous <strong><a
 href="https://www.esportsonly.com/csgo-stats-dont-tell-the-full-story/#:~:text=KAST%20%E2%80%93%20Percentage%20of%20rounds%20in,for%2Dfront%20of%20impactful%20kills.">(De
 Carlo, 2019)</a></strong> .</p>
 </div>
 <div id="data-collection" class="section level3">
 <h3>Data Collection</h3>
 <p>The data sets were acquired via <strong><a
-href="https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download">Kaggle</a></strong>.</p>
+href="https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download">Kaggle</a></strong>
+(link to the initial data collectors profile <strong><a
+href="https://www.kaggle.com/mateusdmachado">here</a></strong>).</p>
 </div>
 <div id="data-used" class="section level3">
 <h3>Data Used</h3>
 <p>The data set which was chosen for analysis was player data across
 tournaments.</p>
+<pre class="r"><code>head(dfp)</code></pre>
+<pre><code>##         date player_name          team      opponent       country player_id
+## 1 2020-02-26      Brehze Evil Geniuses        Liquid United States      9136
+## 2 2020-02-26        CeRq Evil Geniuses        Liquid      Bulgaria     11219
+## 3 2020-02-26       EliGE        Liquid Evil Geniuses United States      8738
+## 4 2020-02-26       Ethan Evil Geniuses        Liquid United States     10671
+## 5 2020-02-26         NAF        Liquid Evil Geniuses        Canada      8520
+## 6 2020-02-26    Stewie2K        Liquid Evil Geniuses United States      8797
+##   match_id event_id        event_name best_of    map_1 map_2   map_3 kills
+## 1  2339385     4901 IEM Katowice 2020       3 Overpass  Nuke Inferno    57
+## 2  2339385     4901 IEM Katowice 2020       3 Overpass  Nuke Inferno    54
+## 3  2339385     4901 IEM Katowice 2020       3 Overpass  Nuke Inferno    55
+## 4  2339385     4901 IEM Katowice 2020       3 Overpass  Nuke Inferno    43
+## 5  2339385     4901 IEM Katowice 2020       3 Overpass  Nuke Inferno    52
+## 6  2339385     4901 IEM Katowice 2020       3 Overpass  Nuke Inferno    56
+##   assists deaths hs flash_assists kast kddiff  adr fkdiff rating m1_kills
+## 1      14     61 29             0 71.1     -4 79.9      0   1.04       11
+## 2      10     54 18             4 65.1      0 71.7      2   0.98       11
+## 3      10     51 28             1 67.5      4 77.9      1   1.08       15
+## 4       5     54 18             2 65.1    -11 58.7     -4   0.83       11
+## 5      22     46 23             9 77.1      6 75.9     -1   1.08       10
+## 6       8     54 31             3 73.5      2 67.2      1   1.08       18
+##   m1_assists m1_deaths m1_hs m1_flash_assists m1_kast m1_kddiff m1_adr
+## 1          3        18     5                0    65.2        -7   60.8
+## 2          2        17     4                2    60.9        -6   68.9
+## 3          3        12     9                0    69.6         3   77.0
+## 4          1        15     6                1    65.2        -4   60.7
+## 5          5        12     3                3    65.2        -2   51.5
+## 6          3        11    11                1    82.6         7   76.2
+##   m1_fkdiff m1_rating m2_kills m2_assists m2_deaths m2_hs m2_flash_assists
+## 1        -1      0.70       30          7        24    16                0
+## 2        -1      0.75       26          6        19     8                1
+## 3         3      1.32       24          3        24    14                0
+## 4        -2      0.73       22          3        21     8                1
+## 5         0      0.83       29          6        21    16                0
+## 6         3      1.40       21          2        25    12                0
+##   m2_kast m2_kddiff m2_adr m2_fkdiff m2_rating m3_kills m3_assists m3_deaths
+## 1    73.5         6   99.2         6      1.38       16          4        19
+## 2    76.5         7   80.1         3      1.24       17          2        18
+## 3    64.7         0   72.9        -1      0.97       16          4        15
+## 4    70.6         1   67.9        -2      1.00       10          1        18
+## 5    82.4         8  101.9         0      1.35       13         11        13
+## 6    67.6        -4   60.1        -1      0.92       17          3        18
+##   m3_hs m3_flash_assists m3_kast m3_kddiff m3_adr m3_fkdiff m3_rating kills_ct
+## 1     8                0    73.1        -3   71.6        -5      0.91       34
+## 2     6                1    53.8        -1   63.1         0      0.87       37
+## 3     5                1    69.2         1   85.2        -1      1.04       31
+## 4     4                0    57.7        -8   45.0         0      0.69       33
+## 5     4                6    80.8         0   63.3        -1      0.98       28
+## 6     8                2    73.1        -1   68.4        -1      1.01       29
+##   deaths_ct kddiff_ct adr_ct kast_ct rating_ct kills_t deaths_t kddiff_t adr_t
+## 1        30         4   81.6    79.2      1.10      23       31       -8  77.5
+## 2        25        12   77.4    72.9      1.16      17       29      -12  63.9
+## 3        17        14   96.6    71.4      1.39      24       34      -10  64.2
+## 4        23        10   74.0    75.0      1.11      10       31      -21  37.8
+## 5        17        11   96.3    85.7      1.36      24       29       -5  61.0
+## 6        18        11   73.2    88.6      1.23      27       36       -9  62.8
+##   kast_t rating_t m1_kills_ct m1_deaths_ct m1_kddiff_ct m1_adr_ct m1_kast_ct
+## 1   60.0     0.97           8           10           -2      76.3       73.3
+## 2   54.3     0.73           9            9            0      72.3       73.3
+## 3   64.6     0.86          11            2            9     135.2       75.0
+## 4   51.4     0.43           9            8            1      68.3       73.3
+## 5   70.8     0.87           4            3            1      64.8       62.5
+## 6   62.5     0.97           8            3            5      83.4      100.0
+##   m1_rating_ct m1_kills_t m1_deaths_t m1_kddiff_t m1_adr_t m1_kast_t
+## 1         0.90          3           8          -5     31.9      50.0
+## 2         0.88          2           8          -6     62.4      37.5
+## 3         2.17          4          10          -6     45.9      66.7
+## 4         0.92          2           7          -5     46.5      50.0
+## 5         0.98          6           9          -3     44.4      66.7
+## 6         1.51         10           8           2     72.4      73.3
+##   m1_rating_t m2_kills_ct m2_deaths_ct m2_kddiff_ct m2_adr_ct m2_kast_ct
+## 1        0.34          17           10            7      93.7       83.3
+## 2        0.50          15            6            9      79.8       88.9
+## 3        0.87          13            9            4      87.6       75.0
+## 4        0.38          15            6            9      84.3       83.3
+## 5        0.75          19            8           11     128.1      100.0
+## 6        1.34          13            9            4      73.8       87.5
+##   m2_rating_ct m2_kills_t m2_deaths_t m2_kddiff_t m2_adr_t m2_kast_t
+## 1         1.41         13          14          -1    105.3      62.5
+## 2         1.45         11          13          -2     80.5      62.5
+## 3         1.26         11          15          -4     59.7      55.6
+## 4         1.40          7          15          -8     49.3      56.2
+## 5         1.88         10          13          -3     78.7      66.7
+## 6         1.19          8          16          -8     48.1      50.0
+##   m2_rating_t m3_kills_ct m3_deaths_ct m3_kddiff_ct m3_adr_ct m3_kast_ct
+## 1        1.35           9           10           -1      72.5       80.0
+## 2        1.00          13           10            3      79.5       53.3
+## 3        0.71           7            6            1      81.5       63.6
+## 4        0.55           9            9            0      67.2       66.7
+## 5        0.89           5            6           -1      72.9       81.8
+## 6        0.69           8            6            2      65.1       81.8
+##   m3_rating_ct m3_kills_t m3_deaths_t m3_kddiff_t m3_adr_t m3_kast_t
+## 1         0.93          7           9          -2     70.4      63.6
+## 2         1.12          4           8          -4     40.7      54.5
+## 3         1.03          9           9           0     87.9      73.3
+## 4         0.97          1           9          -8     14.8      45.5
+## 5         0.96          8           7           1     56.3      80.0
+## 6         1.09          9          12          -3     70.8      66.7
+##   m3_rating_t
+## 1        0.89
+## 2        0.53
+## 3        1.05
+## 4        0.31
+## 5        0.99
+## 6        0.95</code></pre>
 </div>
 <div id="data-cleaning" class="section level3">
 <h3>Data Cleaning</h3>
@@ -302,8 +410,8 @@ katoPRGT[&quot;winner&quot;] &lt;- c(0,0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0
 )</code></pre>
 </div>
-<div id="missing-data" class="section level3">
-<h3>Missing Data</h3>
+<div id="cleaning-part-2-missing-data" class="section level3">
+<h3>Cleaning Part 2: Missing Data</h3>
 <p>After finishing the initial data clearing and filtering, it was noted
 that the initial data set which was imported did not contain the full
 match data for IEM Katowice 2020. In order to remedy this the data
@@ -357,7 +465,7 @@ utilized.</p>
   theme_dark() +
   #adjusting text and plot elements
   theme(text = element_text (size = 15), title = element_text(face = &#39;bold&#39;), 
-        plot.title = element_text(hjust = .5), panel.grid.minor = element_blank()) +
+        plot.title = element_text(hjust = .3), panel.grid.minor = element_blank()) +
   #renaming the win loss legend
   scale_shape_discrete(labels = c(&quot;Win&quot;, &quot;Loss&quot;), name = &#39;Wins and Losses&#39;) +
   #adding the legend 2 title and loading custom colors
@@ -373,10 +481,10 @@ utilized.</p>
   
 
  e</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code> ggsave(here(&#39;figs&#39;, &#39;figure1.png&#39;))</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
-<pre class="r"><code>#knitr::include_graphics(here::here(&quot;figs&quot;, &#39;figure1.png&#39;))</code></pre>
+<pre class="r"><code>#knitr::include_graphics(here::here(&quot;figs&quot;, &#39;figure1.png&#39;), dpi = )</code></pre>
 </div>
 <div id="visualization-summary" class="section level3">
 <h3>Visualization Summary</h3>
@@ -445,15 +553,17 @@ animated plot.</p>
 </div>
 <div id="constraints" class="section level3">
 <h3>Constraints</h3>
-<p>There were few constraints throughout this project, the first was a
-lack of meaningful and in depth statistics on professional CSGO players,
-while ADR and KAST serve as decent measure of skill, statistics such as
-reaction time and utility damage would of made for a more in deph
-visualization and a new dimension to analyze. Furthermore, there is a
-lack of professional CSGO data sets available. This may be due to third
-party constraints on Web scraping as the main CSGO statistics
+<p>There were several constraints throughout this project, the first was
+a lack of meaningful and in depth statistics on professional CSGO
+players, while ADR and KAST serve as decent measure of skill, statistics
+such as reaction time and utility damage would of made for a more in
+depth visualization and a new dimension to analyze. Furthermore, there
+is a lack of professional CSGO data sets available. This may be due to
+third party constraints on Web scraping as the main CSGO statistics
 provider(HLTV) has set up measures against it; requiring external
-programs.</p>
+programs. Another constraint is the use of an animated plot, as the
+knitr could not read or load a .gif file or an animation to github.io or
+pdf. Future iterations will utilize shiny to circumvent this issue.</p>
 </div>
 <div id="future-direction" class="section level3">
 <h3>Future Direction</h3>

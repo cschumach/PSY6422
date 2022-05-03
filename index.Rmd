@@ -5,6 +5,7 @@ date: '2022-04-29'
 output:
   pdf_document: default
   html_document: default
+  
 ---
 
 
@@ -23,17 +24,18 @@ IEM Katowice stands out among other e-sport tournaments due to its prize pool of
 
   Counter Strike: Global Offensive (abbreviated most times to CSGO) is a competitive First Person Shooter (FPS) game. Each game consists of up to 30 rounds, which are played by two teams consisting of five players each. The winning team is decided by whoever reaches 16 round wins first. Both teams start on a "side" either as "Terrorists" (T) or "Counter Terrorists" (CT), which they play until half time, where then both teams are force switched to play the other side (ex. team 1 started as T, and in half time they are switched to CT). Each side has a different objective and play style. The T side's(offensive) objective is to plant a bomb at one of the two bomb sites on the map before the 1 minute 55 second round timer gets to zero, or eliminate the CT side. The CT side (defensive) must protect the bombsites, deny bomb planting, defuse the bomb (if planted), or eliminate the T side to win the round. 
 
-### Current Study
+### Current Study Objective
 
   This study, seeks to look at the performance of professional players and their teams across the entire length of the tournament. The visualization will compare the players **KAST score (Kills, Assists, Survival, Trades)**. The KAST score provides a more nuanced look into a players performance, by introducing more factors dependent on team work (such as time alive and utility assists). KAST is measured from 0%-100% **[(De Carlo, 2019)](https://www.esportsonly.com/csgo-stats-dont-tell-the-full-story/#:~:text=KAST%20%E2%80%93%20Percentage%20of%20rounds%20in,for%2Dfront%20of%20impactful%20kills.)** 
   
 
-  The next comparison statistic will be **Average Damage Per Round (ADR)**, as this provides a good gauge of individual match impact for the player as it averages out the damage which they cause to the other teams players round by round. This adds insight into statistics that will not count towards ones KAST, such as utility damage (grenades), damage from T-Side bomb explosions and, head shots (ex head shots have a higher damage value attributed to them, thus a player with a higher ADR will have a higher amount of head shots). This measure is continuous **[(De Carlo, 2019)](https://www.esportsonly.com/csgo-stats-dont-tell-the-full-story/#:~:text=KAST%20%E2%80%93%20Percentage%20of%20rounds%20in,for%2Dfront%20of%20impactful%20kills.)** .
+  The next comparison statistic will be **Average Damage Per Round (ADR)**, as this provides a good gauge of individual match impact for the player as it averages out the damage which they cause to the other teams players round by round. This adds insight into statistics that will not count towards a players KAST, such as utility damage (grenades), damage from T-Side bomb explosions and, head shots (ex head shots have a higher damage value attributed to them, thus a player with a higher ADR will have a higher amount of head shots). This measure is continuous **[(De Carlo, 2019)](https://www.esportsonly.com/csgo-stats-dont-tell-the-full-story/#:~:text=KAST%20%E2%80%93%20Percentage%20of%20rounds%20in,for%2Dfront%20of%20impactful%20kills.)** .
   
 
-
 ### Data Collection
-  The data sets were acquired via **[Kaggle](https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download)**.
+  The data sets were acquired via **[Kaggle](https://www.kaggle.com/datasets/mateusdmachado/csgo-professional-matches?resource=download)** (link to the initial data collectors profile **[here](https://www.kaggle.com/mateusdmachado)**).
+  
+  
 
 ### Data Used
   The data set which was chosen for analysis was player data across tournaments. 
@@ -46,9 +48,10 @@ library("gganimate")
 library("ggthemes")
 library("here")
 library('RColorBrewer')
-library('ggrepel')
-library('plotly')
 dfp <- read.csv(here::here('rawdata', "players.csv"))
+head(dfp)
+```
+```{r}
 head(dfp)
 ```
 
@@ -103,7 +106,7 @@ katoPRGT["winner"] <- c(0,0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 )
 ```
 
-### Missing Data 
+### Cleaning Part 2: Missing Data 
 
   After finishing the initial data clearing and filtering, it was noted that the initial data set which was imported did not contain the full match data for IEM Katowice 2020. In order to remedy this the data frame; katoPRGT (the filtered and cleaned data set) was opened, and the missing data was imputed from [HLTV.org](https://www.hltv.org/results?event=4901). The new data set has been uploaded to [github](https://github.com/cschumach/csgokatowiceplayerdata) for replicability.
 
@@ -131,7 +134,7 @@ mycolors <- c("#6A00FF", "#FF00FF", "#FF0040", "#FF9500", "#FFFF00",
 
 Due to the previous scoping of the data, a scatter plot was utilized.
 
-```{r echo=TRUE}
+```{r echo=TRUE }
 e <- ggplot(filfullkatoplayerdf, aes(x = kast, y = adr, color = team)) +
   
   geom_point(size = 4, alpha = .6, aes(shape = factor(winner))) +
@@ -139,7 +142,7 @@ e <- ggplot(filfullkatoplayerdf, aes(x = kast, y = adr, color = team)) +
   theme_dark() +
   #adjusting text and plot elements
   theme(text = element_text (size = 15), title = element_text(face = 'bold'), 
-        plot.title = element_text(hjust = .5), panel.grid.minor = element_blank()) +
+        plot.title = element_text(hjust = .3), panel.grid.minor = element_blank()) +
   #renaming the win loss legend
   scale_shape_discrete(labels = c("Win", "Loss"), name = 'Wins and Losses') +
   #adding the legend 2 title and loading custom colors
@@ -162,7 +165,7 @@ e <- ggplot(filfullkatoplayerdf, aes(x = kast, y = adr, color = team)) +
 ```
 
 ```{r}
-#knitr::include_graphics(here::here("figs", 'figure1.png'))
+#knitr::include_graphics(here::here("figs", 'figure1.png'), dpi = )
 ```
 
 ### Visualization Summary
@@ -219,7 +222,7 @@ The animated version works well in tandem with the non animated version as well 
 
 ### Constraints 
 
-There were few constraints throughout this project, the first was a lack of meaningful and in depth statistics on professional CSGO players, while ADR and KAST serve as decent measure of skill, statistics such as reaction time and utility damage would of made for a more in deph visualization and a new dimension to analyze. Furthermore, there is a lack of professional CSGO data sets available. This may be due to third party constraints on Web scraping as the main CSGO statistics provider(HLTV) has set up measures against it; requiring external programs. 
+There were several constraints throughout this project, the first was a lack of meaningful and in depth statistics on professional CSGO players, while ADR and KAST serve as decent measure of skill, statistics such as reaction time and utility damage would of made for a more in depth visualization and a new dimension to analyze. Furthermore, there is a lack of professional CSGO data sets available. This may be due to third party constraints on Web scraping as the main CSGO statistics provider(HLTV) has set up measures against it; requiring external programs. Another constraint is the use of an animated plot, as the knitr could not read or load a .gif file or an animation to github.io or pdf. Future iterations will utilize shiny to circumvent this issue.  
 
 ### Future Direction 
 
